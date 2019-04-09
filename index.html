@@ -1,75 +1,45 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <title>HTML5 Canvas Drawing Board</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
     <link rel="stylesheet" href="./index.css">
     <script type="text/JavaScript" src="./app.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-    
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+        crossorigin="anonymous"> -->
 </head>
-        
-    <body>
-           
-            
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3" style="background-color:antiquewhite">
-                    <!-- <div id="eraser" class="button">
-                            <i class="fa fa-eraser" aria-hidden="true"></i>
-                    </div>
-                    <div class="button"
-                    <div id="textArea" class="button">
-                            <i class="fa fa-font" aria-hidden="true"></i>
-                    </div>
-                    <div id="square" class="button">
-                            <i class="fa fa-square-o" aria-hidden="true"></i>
-                    </div>
-                    <div id="circle" class="button">
-                            <i class="fa fa-circle-thin" aria-hidden="true"></i>
-                    </div> -->
-                    <form action="/action_page.php" id="frm1">
-                        <div class="form-group">
-                          <label for="number">Log calculator</label>
-                          <input type="number" class="form-control" id="number" placeholder="Enter no." name="number">
-                        </div>
-                        
-                    </form>
-                        <button type="submit" class="btn btn-default" onclick="getLog()">Result</button>
-                      
-                    </div>
-                    
-                           
 
-                </div>
-          
-            <div class="col-md-9" style="background-color:aqua">
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" style="background-color:antiquewhite">
+
+                <label for="number">Log calculator</label>
+                <input type="number" class="form-control" id="userInput" placeholder="Enter no." name="number"><br>
+                <p id="frm1"></p>
+                <button onclick="findLog()">Find Log</button>
+            </div>
+        </div>
+
+        <div class="col-md-9" style="background-color:aqua">
             <canvas id="myCanvas">
-                
             </canvas>
-            
-           </div> 
-</div> 
-</div>
+        </div>
+    </div>
+    </div>
 
-<script>
-        function getLog() {
-             var x= document.getElementById("frm1");
-             var no="";
-             var i;
-             for (i = 0; i < x.length ;i++) {
-     no += x.elements[i].value;
-  }
-       
-             alert(Math.log(no));
+    <script>
+        function findLog() {
+            var input = document.getElementById("userInput").value;
+            document.getElementById("frm1").innerHTML = "Your result " + Math.log(input);
         }
-        </script>
-    </body>
- </html>
-    
+    </script>
+</body>
+
+</html>
