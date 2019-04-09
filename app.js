@@ -1,6 +1,7 @@
 window.onload = function() {
 	var myCanvas = document.getElementById("myCanvas");
-	var ctx = myCanvas.getContext("2d");
+    var ctx = myCanvas.getContext("2d");
+    
     
     // Fill Window Width and Height
     myCanvas.width = window.innerWidth;
@@ -86,3 +87,5 @@ window.onload = function() {
 // function getLog(x){
 //     document..getElementById("number").innerHTML=Math.log(x);
 // }
+
+

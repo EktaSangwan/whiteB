@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
-    <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./index.css">
     <script type="text/JavaScript" src="./app.js"></script>
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous"> -->
@@ -25,6 +25,19 @@
                 <p id="frm1"></p>
                 <button onclick="findLog()">Find Log</button>
             </div>
+            <div style="background-color:azure">
+                <label for="number">Squareroot calculator</label>
+                <input type="number" class="form-control" id="sqInput" placeholder="Enter no." name="number"><br>
+                <p id="frm2"></p>
+                <button onclick="findSqroot()">Find Squareroot</button>
+            </div>
+            <div style="background-color:blanchedalmond">
+                    <label for="number">Exponential calculator</label>
+                    <input type="number" class="form-control" id="exInput" placeholder="Enter no." name="number"><br>
+                    <p id="frm3"></p>
+                    <button onclick="findExp()">Find Exponential</button>
+                </div>
+            
         </div>
 
         <div class="col-md-9" style="background-color:aqua">
@@ -39,7 +52,21 @@
             var input = document.getElementById("userInput").value;
             document.getElementById("frm1").innerHTML = "Your result " + Math.log(input);
         }
+        function findSqroot() {
+            var input = document.getElementById("sqInput").value;
+            document.getElementById("frm2").innerHTML = "Your result " + Math.sqrt(input);
+        }
+        function findExp() {
+            var input = document.getElementById("exInput").value;
+            document.getElementById("frm3").innerHTML = "Your result " + Math.exp(input);
+        }
+
     </script>
+
+<!-- Fabric.js cdn -->
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.7.22/fabric.min.js"></script>
+ -->
 </body>
 
 </html>
